@@ -6,20 +6,59 @@ import Cont from '../components/Cont.astro';
 
 <!DOCTYPE html>
 <html lang="es">
-<head class="min-h-screen w-full bg-slate-900">
-    <Navbar />
-</head>
 <body class="min-h-screen w-full bg-slate-900">
-	<div class="container bg-slate-900 mx-auto">
-		<div class="bg-slate-900 grid grid-cols-3 gap-4">
-		  <div class="bg-green-500 h-screen">Barra Lateral Izquierda</div>
+
+	<div class="grid grid-cols-2">
+		<div class="sidebar bg-slate-900 w-screen/6">
+		</div>
+		<div class="container bg-slate-900 mx-auto">
+		<Navbar />
+		<div class="bg-slate-900 grid grid-cols-2 gap-4">
 		  <div class="bg-pink-500 h-screen">
+			    
+			        <div class="flex-grow bg-slate-900">
+					    <div class="bg-cover bg-center rounded-lg"
+						         style="background-image: url('Images/imagen3.webp');"> 
+								   <!-- Tu contenido aquí --> 
+								       <div class="ps-6 bg-slate-900">
+									     <div class="flex gap-2 ">
+										             <button class="flex-none flex items-center justify-center w-9 h-12 rounded-md bg-green-400 text-gray-800 border border-slate-200" type="button" aria-label="hover">
+													                 <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+																	                   <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+																					                   </svg>
+																									                 </button>
+																													               
+																																       <button class="flex-none flex items-center justify-center w-9 h-12 rounded-md bg-green-400 text-gray-800 border border-slate-200" type="button" aria-label="hover">
+																																	           <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+																																			             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+																																						         </svg>
+																																								       </button>
+																																									   </div>
+																																									   </div>
+																																									       <div class=" space-y-0 p-6" >
+																																										           <p class="mb-0 text-4xl text-slate-50 font-bold">
+																																												             Spider-Man:
+																																															         </p> 
+																																																	         <p class="mb-0 text-4xl text-slate-50 font-bold">
+																																																			           No Way Home
+																																																					           </p>
+																																																							         </div>
+																																																									         <div class="mb-8 text-pretty text-slate-50 font-bold ps-6">
+																																																											           Action, Adventure,fantasy
+																																																													         </div>
+																																																															       <div class="ps-6">
+																																																																             <button type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-14 py-2.5 text-center me-2 mb-2">Watch Now</button>
+																																																																			       </div> 
+																																																																				         </div>
+																																																																						   
+																																																																						   
+																																																																						   </div>
 			<Cont />
 		  </div>
-		  <div class="bg-slate-900 h-screen"><BarraLateral /></div>
+		  <div class="bg-slate-900 w-screen/6"><BarraLateral /></div>
 		</div>
 	  </div>
-
+    </div>
 
 											  </body>
 											  </html>
