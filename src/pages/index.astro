@@ -1,24 +1,25 @@
 ---
 import BarraLateral from '../components/BarraLateral.astro';
-
+import Navbar from '../components/Navbar.astro';
+import Cont from '../components/Cont.astro';
 ---
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <title>Página de Películas</title>
-	    <link rel="stylesheet" href="/src/styles/global.css">
-		</head>
-		<body class="bg-gray-900 text-white">
-		  <div class="flex">
-		      <main class="flex-1 p-4">
-			        <h1 class="text-3xl font-bold">Bienvenido a la Página de Películas</h1>
-					      <p class="mt-4">joder que pro soy.</p>
-								    </main>
-									    
-										    <BarraLateral /> 
-											  </div>
+<head class="min-h-screen w-full bg-slate-900">
+    <Navbar />
+</head>
+<body class="min-h-screen w-full bg-slate-900">
+	<div class="container bg-slate-900 mx-auto">
+		<div class="bg-slate-900 grid grid-cols-3 gap-4">
+		  <div class="bg-green-500 h-screen">Barra Lateral Izquierda</div>
+		  <div class="bg-pink-500 h-screen">
+			<Cont />
+		  </div>
+		  <div class="bg-slate-900 h-screen"><BarraLateral /></div>
+		</div>
+	  </div>
+
+
 											  </body>
 											  </html>
