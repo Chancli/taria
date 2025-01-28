@@ -1,6 +1,4 @@
 ---
-import HotNew from '../components/HotNew.astro';
-
 const movies = [
   {
       title: 'Movie Title 1',
@@ -18,6 +16,33 @@ const movies = [
                                               rating: 3,
                                                 },
                                                 ];
-                                                ---
-
-                                                <HotNew movies={movies} />
+<section class="py-10 bg-gray-100">
+  <h2 class="text-2xl font-bold text-center mb-6">Hot New</h2>
+    <div class="flex flex-wrap justify-center">
+        {movies.map(movie => (
+                <div class="bg-white rounded-lg shadow-md m-4 p-4 w-64">
+                        <div class="relative">
+                                  <img src={movie.cover} alt={movie.title} class="rounded-lg w-full h-auto" />
+                                            <div class="absolute top-2 left-2 bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                                                        {movie.rating} / 5
+                                                                  </div>
+                                                                          </div>
+                                                                                  <h3 class="mt-2 text-lg font-semibold">{movie.title}</h3>
+                                                                                          <div class="flex items-center mt-1">
+                                                                                                    {Array.from({ length: 5 }, (_, index) => (
+                                                                                                                  <svg
+                                                                                                                                key={index}
+                                                                                                                                              class={w-4 h-4 ${index < movie.rating ? 'text-yellow-500' : 'text-gray-300'}}
+                                                                                                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                                                                                                                          fill="currentColor"
+                                                                                                                                                                                        viewBox="0 0 20 20"
+                                                                                                                                                                                                    >
+                                                                                                                                                                                                                  <path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 .25 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/>
+                                                                                                                                                                                                                              </svg>
+                                                                                                    ))}
+                                                                                                            </div>
+                                                                                                                  </div>
+        ))}
+          </div>
+          </section>
+                                                                                                    
