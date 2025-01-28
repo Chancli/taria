@@ -1,35 +1,23 @@
 ---
+import HotNew from '../components/HotNew.astro';
 
 const movies = [
   {
-      title: "The Batman",
-          rating: 4.9,
-              image: "https://www.themoviedb.org/t/p/w220_and_h330_face/74x6V2M3w2Q7yI3o9gF4aE1f9Z.jpg"
+      title: 'Movie Title 1',
+          cover: 'https://via.placeholder.com/150',
+              rating: 4,
                 },
                   {
-                      title: "Uncharted",
-                          rating: 4.8,
-                              image: "https://www.themoviedb.org/t/p/w220_and_h330_face/qZ3d7K49wF9hM0oS5v7h88J0T6.jpg"
+                      title: 'Movie Title 2',
+                          cover: 'https://via.placeholder.com/150',
+                              rating: 5,
                                 },
                                   {
-                                      title: "Turning Red",
-                                          rating: 4.8,
-                                              image: "https://www.themoviedb.org/t/p/w220_and_h330_face/qZ3d7K49wF9hM0oS5v7h88J0T6.jpg"
+                                      title: 'Movie Title 3',
+                                          cover: 'https://via.placeholder.com/150',
+                                              rating: 3,
                                                 },
-                                                  {
-                                                      title: "Peacemaker",
-                                                          rating: 4.7,
-                                                              image: "https://www.themoviedb.org/t/p/w220_and_h330_face/qZ3d7K49wF9hM0oS5v7h88J0T6.jpg"
-                                                                }
-                                                                ]
-                                                                ---
+                                                ];
+                                                ---
 
-                                                                <div class="flex flex-col gap-4">
-                                                                  <h2 class="text-xl font-bold">Hot New</h2>
-
-                                                                    <div class="flex gap-4 overflow-x-auto scroll-smooth">
-                                                                        {movies.map((movie) => (
-                                                                              <div class="flex flex-col items-center gap-2">
-                                                                                      <img src={movie.image} alt={movie.title} class="w-48 h-32 rounded-md" />
-                                                                                              <div class="flex items-center gap-1">
-                                                                                                        <span class="text-sm font-bold text-gray-500">{movie.title}</span
+                                                <HotNew movies={movies} />
