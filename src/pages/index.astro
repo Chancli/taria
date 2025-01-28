@@ -14,11 +14,11 @@ import Hotnew from '../components/hotnew.astro';
 	<div class="grid grid-cols-[1fr,3fr] gap-4 ">
 		<div id="berro" class=" mx-auto bg-slate-10 container"> <Sidebar class=" mx-auto flex absolute bg-slate-2" /> </div>
 	<div id="berro2" class="container mx-auto h-screen">
-		<Navbar />
+		<Navbar class="w-full" />
 		<div class="bg-slate-900 grid grid-cols-[4fr,1fr] w-full relative">
-		  <div id="jua" class="grid grid-columns-1 bg-pink-500 mx-0 overflow-x ">
+		  <div id="jua" class="grid grid-columns-1 bg-pink-500 mx-0 overflow-x-auto">
 			    
-			        <div class="flex-grow bg-slate-900">
+			        <div class="flex-grow bg-slate-900 w-full">
 					    <div class="bg-cover bg-center rounded-lg"
 						         style="background-image: url('Images/imagen3.webp');"> 
 								   <!-- Tu contenido aquí --> 
@@ -53,8 +53,8 @@ import Hotnew from '../components/hotnew.astro';
 																																																																			       </div> 
 																																																																				         </div>
 																																																																						 </div>
-		<Hotnew class="relative mx-auto bg-Slate-900" />
-		 <Cont />																																																																			 
+		<Hotnew class="relative mx-auto bg-Slate-900 w-full" />
+		 <Cont class="w-full"/>																																																																			 
 	        
 		</div>
 		<div id="joa" class="absolute top-0 right-0 h-full w-[15%] bg-slate-900"><BarraLateral /></div>
