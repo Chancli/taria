@@ -1,49 +1,27 @@
 ---
 const movies = [
-  {
-      title: 'Movie Title 1',
-          cover: 'https://www.millersearles.com/wp-content/uploads/2016/10/100x150-placeholder.jpg',
-              rating: 4,
-                },
-                  {
-                      title: 'Movie Title 2',
-                          cover: 'https://www.millersearles.com/wp-content/uploads/2016/10/100x150-placeholder.jpg',
-                              rating: 5,
-                                },
-                                  {
-                                      title: 'Movie Title 3',
-                                          cover: 'https://www.millersearles.com/wp-content/uploads/2016/10/100x150-placeholder.jpg',
-                                              rating: 5,
-                                                },
-                                                ];
+  { title: "Movie 1", rating: 4.5, cover: "https://via.placeholder.com/150" },
+  { title: "Movie 2", rating: 3.8, cover: "https://via.placeholder.com/150" },
+  { title: "Movie 3", rating: 4.0, cover: "https://via.placeholder.com/150" },
+  { title: "Movie 4", rating: 5.0, cover: "https://via.placeholder.com/150" },
+  { title: "Movie 5", rating: 4.2, cover: "https://via.placeholder.com/150" },
+];
 ---
-<section class="py-10 bg-gray-100">
+
+<div class="py-8">
   <h2 class="text-2xl font-bold text-center mb-6">Hot New</h2>
-    <div class="flex flex-wrap justify-center">
-        {movies.map(movie => (
-                <div class="bg-white rounded-lg shadow-md m-4 p-4 w-64">
-                        <div class="relative">
-                                  <img src={movie.cover} alt={movie.title} class="rounded-lg w-full h-auto" />
-                                            <div class="absolute top-2 left-2 bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded">
-                                                        {movie.rating} / 5
-                                                                  </div>
-                                                                          </div>
-                                                                                  <h3 class="mt-2 text-lg font-semibold">{movie.title}</h3>
-                                                                                          <div class="flex items-center mt-1">
-                                                                                                    {Array.from({ length: 5 }, (_, index) => (
-                                                                                                                  <svg
-                                                                                                                                key={index}
-                                                                                                                          class={`w-4 h-4 ${index < movie.rating ? 'text-yellow-500' : 'text-gray-300'}`}
-                                                                                                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                                                                                                                          fill="currentColor"
-                                                                                                                                                                                        viewBox="0 0 20 20"
-                                                                                                                                                                                                    >
-                                                                                                                                                                                                                  <path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 .25 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/>
-                                                                                                                                                                                                                              </svg>
-                                                                                                    ))}
-                                                                                                            </div>
-                                                                                                                  </div>
-        ))}
+  <div class="overflow-x-auto">
+    <div class="flex space-x-4">
+      {movies.map(movie => (
+        <div class="relative w-40">
+          <img src={movie.cover} alt={movie.title} class="w-full h-auto rounded-lg shadow-md" />
+          <div class="absolute top-2 left-2 flex items-center bg-yellow-500 text-white text-xs font-semibold rounded px-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.236 12H0l7.618-1.18L10 0l2.382 10.82L20 12h-5.236l1.114 5.09L10 15z"/></svg>
+            {movie.rating} / 5
           </div>
-          </section>
----
+          <h3 class="mt-2 text-center text-lg font-semibold">{movie.title}</h3>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
